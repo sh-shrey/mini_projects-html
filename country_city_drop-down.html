@@ -1,0 +1,57 @@
+<html>
+<head>
+	<title> capital_country </title>
+	<style>
+			body{
+margin: 0;
+padding: 0;
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat; 
+font-family: sans-serif;
+}
+
+.registration{
+    width:640px;
+	height:150px;
+	background: #000;
+	color: #fff;
+	top:50%;
+	left:50%;
+	position: absolute;
+	transform:translate(-50%,-50%);
+	box-sizing: border-box;
+	
+}
+#grad1 {
+  background-image: linear-gradient(to bottom, #ff9a9e 0%,#fad0c4 100%);
+}
+		</style>
+	<script type="text/javascript">
+		function OnDropDownChnage(dropDown){
+			var selectedValue = dropDown.options[dropDown.selectedIndex].value;
+			document.getElementById('textSelectedCapital').innerHTML = selectedValue;
+		}
+	</script>
+</head>
+<body>
+	<div class="registration"  id ="grad1"> 
+	<form action="">
+<fieldset>
+          <legend>validation page</legend> 
+		<select name="Countries" onchange="OnDropDownChnage(this);">
+			<option value=" "> -- select countries </option>
+			<option value="New delhi"> India </option>
+			<option value="Tokyo"> Japan </option>
+            <option value="Berlin"> Germany </option>
+             <option value="Moscow"> Russia </option>
+             <option value="Athens"> Greece </option>
+             <option value="Budapest"> Hungary </option>
+		 </select>
+		 <h1 style="color: green; font-family: verdana; font-size: 200%; " id="textSelectedCapital" type="text">
+		 </h1>
+		</fieldset>
+		</form>
+
+</body>
+</html>
